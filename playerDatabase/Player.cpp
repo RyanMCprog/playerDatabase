@@ -67,3 +67,26 @@ void Player::showInventory(Player Party[], size_t size)
 		
 	}
 }
+
+void Player::sharedMoney(int savedMoney, int & result)
+{
+	int currentMoney = rand() % 50 + 1;
+	result = currentMoney + savedMoney;
+	std::cout << "your party now has " << result << " dollars" << std::endl;
+}
+
+int Player::addtoBank()
+{
+	int saved = 0;
+	while (saved < 1)
+	{
+		std::cout << "how much money do you want to save?" << std::endl;
+		std::cin >> saved;
+		std::cout << std::endl;
+		std::cin.clear();
+		std::cin.ignore(INT_MAX, '\n');
+	}
+	return saved;
+}
+
+

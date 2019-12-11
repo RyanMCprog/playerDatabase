@@ -21,6 +21,9 @@ public:
 
 	void showInventory(Player Party[], size_t size);
 
+	void sharedMoney(int savedMoney, int& result);
+
+	int addtoBank();
 private:
 
 };
